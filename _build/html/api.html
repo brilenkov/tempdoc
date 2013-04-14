@@ -1,0 +1,644 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Source documentation &mdash; fetchopia 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="top" title="fetchopia 0.0.1 documentation" href="index.html" />
+    <link rel="prev" title="Changelog" href="changelog.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="changelog.html" title="Changelog"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">fetchopia 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="source-documentation">
+<h1>Source documentation<a class="headerlink" href="#source-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-bbhw_canada">
+<span id="scrapers-bbhw-canada-scraper-for-canada-part-of-http-www-betterbidding-com"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">scrapers.bbhw_canada</span></tt> &#8211; Scraper for Canada part of <a class="reference external" href="http://www.betterbidding.com">http://www.betterbidding.com</a><a class="headerlink" href="#module-bbhw_canada" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="bbhw_canada.BBHotwirePostSpiderCanada">
+<em class="property">class </em><tt class="descclassname">bbhw_canada.</tt><tt class="descname">BBHotwirePostSpiderCanada</tt><big>(</big><em>name=None</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#bbhw_canada.BBHotwirePostSpiderCanada" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">scrapy.spider.BaseSpider</span></tt></p>
+<p><a class="reference external" href="mailto:David&#37;&#52;&#48;fetchopia">David<span>&#64;</span>fetchopia</a> 
+Date:4/25/2012
+Description:
+Scrapes the betterbidding forum site for all Canada hotwire hotel lists
+Additional manual processing for entries state field after running this script (Canadian hotels have no states)</p>
+<dl class="attribute">
+<dt id="bbhw_canada.BBHotwirePostSpiderCanada.allowed_domains">
+<tt class="descname">allowed_domains</tt><em class="property"> = ['betterbidding.com']</em><a class="headerlink" href="#bbhw_canada.BBHotwirePostSpiderCanada.allowed_domains" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bbhw_canada.BBHotwirePostSpiderCanada.date_diff">
+<tt class="descname">date_diff</tt><big>(</big><em>date1</em>, <em>date2</em><big>)</big><a class="headerlink" href="#bbhw_canada.BBHotwirePostSpiderCanada.date_diff" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bbhw_canada.BBHotwirePostSpiderCanada.find_board">
+<tt class="descname">find_board</tt><big>(</big><em>response</em><big>)</big><a class="headerlink" href="#bbhw_canada.BBHotwirePostSpiderCanada.find_board" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bbhw_canada.BBHotwirePostSpiderCanada.find_dates">
+<tt class="descname">find_dates</tt><big>(</big><em>date_str</em><big>)</big><a class="headerlink" href="#bbhw_canada.BBHotwirePostSpiderCanada.find_dates" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bbhw_canada.BBHotwirePostSpiderCanada.find_post_num">
+<tt class="descname">find_post_num</tt><big>(</big><em>url</em><big>)</big><a class="headerlink" href="#bbhw_canada.BBHotwirePostSpiderCanada.find_post_num" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="bbhw_canada.BBHotwirePostSpiderCanada.name">
+<tt class="descname">name</tt><em class="property"> = 'BBHotwirePostSpiderCanada'</em><a class="headerlink" href="#bbhw_canada.BBHotwirePostSpiderCanada.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bbhw_canada.BBHotwirePostSpiderCanada.parse">
+<tt class="descname">parse</tt><big>(</big><em>response</em><big>)</big><a class="headerlink" href="#bbhw_canada.BBHotwirePostSpiderCanada.parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses start url (betterbidding.com) and yields request of found links</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bbhw_canada.BBHotwirePostSpiderCanada.parse_board">
+<tt class="descname">parse_board</tt><big>(</big><em>response</em><big>)</big><a class="headerlink" href="#bbhw_canada.BBHotwirePostSpiderCanada.parse_board" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bbhw_canada.BBHotwirePostSpiderCanada.parse_hotwire_list">
+<tt class="descname">parse_hotwire_list</tt><big>(</big><em>response</em><big>)</big><a class="headerlink" href="#bbhw_canada.BBHotwirePostSpiderCanada.parse_hotwire_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="bbhw_canada.BBHotwirePostSpiderCanada.start_urls">
+<tt class="descname">start_urls</tt><em class="property"> = ['http://www.betterbidding.com/']</em><a class="headerlink" href="#bbhw_canada.BBHotwirePostSpiderCanada.start_urls" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="bbhw_canada.main">
+<tt class="descclassname">bbhw_canada.</tt><tt class="descname">main</tt><big>(</big><big>)</big><a class="headerlink" href="#bbhw_canada.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setups item signal and run the spider</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-bbhw_us">
+<span id="scrapers-bbhw-us-scraper-for-us-part-of-http-www-betterbidding-com"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">scrapers.bbhw_us</span></tt> &#8211; Scraper for US part of <a class="reference external" href="http://www.betterbidding.com">http://www.betterbidding.com</a><a class="headerlink" href="#module-bbhw_us" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="bbhw_us.BBHotwirePostSpiderUS">
+<em class="property">class </em><tt class="descclassname">bbhw_us.</tt><tt class="descname">BBHotwirePostSpiderUS</tt><big>(</big><em>name=None</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#bbhw_us.BBHotwirePostSpiderUS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">scrapy.spider.BaseSpider</span></tt></p>
+<p><a class="reference external" href="mailto:David&#37;&#52;&#48;fetchopia">David<span>&#64;</span>fetchopia</a> 
+Date:4/25/2012
+Description:
+Scrapes the betterbidding forum site for all US hotwire hotel lists
+Additional manual processing for entries state field after running this script (Some US states are clustered together)</p>
+<dl class="attribute">
+<dt id="bbhw_us.BBHotwirePostSpiderUS.allowed_domains">
+<tt class="descname">allowed_domains</tt><em class="property"> = ['betterbidding.com']</em><a class="headerlink" href="#bbhw_us.BBHotwirePostSpiderUS.allowed_domains" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bbhw_us.BBHotwirePostSpiderUS.date_diff">
+<tt class="descname">date_diff</tt><big>(</big><em>date1</em>, <em>date2</em><big>)</big><a class="headerlink" href="#bbhw_us.BBHotwirePostSpiderUS.date_diff" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bbhw_us.BBHotwirePostSpiderUS.find_board">
+<tt class="descname">find_board</tt><big>(</big><em>response</em><big>)</big><a class="headerlink" href="#bbhw_us.BBHotwirePostSpiderUS.find_board" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bbhw_us.BBHotwirePostSpiderUS.find_dates">
+<tt class="descname">find_dates</tt><big>(</big><em>date_str</em><big>)</big><a class="headerlink" href="#bbhw_us.BBHotwirePostSpiderUS.find_dates" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bbhw_us.BBHotwirePostSpiderUS.find_post_num">
+<tt class="descname">find_post_num</tt><big>(</big><em>url</em><big>)</big><a class="headerlink" href="#bbhw_us.BBHotwirePostSpiderUS.find_post_num" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="bbhw_us.BBHotwirePostSpiderUS.name">
+<tt class="descname">name</tt><em class="property"> = 'BBHotwirePostSpiderUS'</em><a class="headerlink" href="#bbhw_us.BBHotwirePostSpiderUS.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bbhw_us.BBHotwirePostSpiderUS.parse">
+<tt class="descname">parse</tt><big>(</big><em>response</em><big>)</big><a class="headerlink" href="#bbhw_us.BBHotwirePostSpiderUS.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bbhw_us.BBHotwirePostSpiderUS.parse_board">
+<tt class="descname">parse_board</tt><big>(</big><em>response</em><big>)</big><a class="headerlink" href="#bbhw_us.BBHotwirePostSpiderUS.parse_board" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bbhw_us.BBHotwirePostSpiderUS.parse_hotwire_list">
+<tt class="descname">parse_hotwire_list</tt><big>(</big><em>response</em><big>)</big><a class="headerlink" href="#bbhw_us.BBHotwirePostSpiderUS.parse_hotwire_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="bbhw_us.BBHotwirePostSpiderUS.start_urls">
+<tt class="descname">start_urls</tt><em class="property"> = ['http://www.betterbidding.com/']</em><a class="headerlink" href="#bbhw_us.BBHotwirePostSpiderUS.start_urls" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="bbhw_us.main">
+<tt class="descclassname">bbhw_us.</tt><tt class="descname">main</tt><big>(</big><big>)</big><a class="headerlink" href="#bbhw_us.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setups item signal and run the spider</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-bbpriceline_canada">
+<span id="scrapers-bbpriceline-canada-scraper-for-canada-part-of-http-www-betterbidding-com"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">scrapers.bbpriceline_canada</span></tt> &#8211; Scraper for Canada part of <a class="reference external" href="http://www.betterbidding.com">http://www.betterbidding.com</a><a class="headerlink" href="#module-bbpriceline_canada" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="bbpriceline_canada.BBPricelinePostSpiderCanada">
+<em class="property">class </em><tt class="descclassname">bbpriceline_canada.</tt><tt class="descname">BBPricelinePostSpiderCanada</tt><big>(</big><em>name=None</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#bbpriceline_canada.BBPricelinePostSpiderCanada" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">scrapy.spider.BaseSpider</span></tt></p>
+<p><a class="reference external" href="mailto:David&#37;&#52;&#48;fetchopia">David<span>&#64;</span>fetchopia</a> 
+Date:4/25/2012
+Description:
+Scrapes the betterbidding forum site for all Canada priceline hotel lists
+Additional manual processing for entries state field after running this script (Canadian hotels have no states)</p>
+<dl class="attribute">
+<dt id="bbpriceline_canada.BBPricelinePostSpiderCanada.allowed_domains">
+<tt class="descname">allowed_domains</tt><em class="property"> = ['betterbidding.com']</em><a class="headerlink" href="#bbpriceline_canada.BBPricelinePostSpiderCanada.allowed_domains" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bbpriceline_canada.BBPricelinePostSpiderCanada.date_diff">
+<tt class="descname">date_diff</tt><big>(</big><em>date1</em>, <em>date2</em><big>)</big><a class="headerlink" href="#bbpriceline_canada.BBPricelinePostSpiderCanada.date_diff" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bbpriceline_canada.BBPricelinePostSpiderCanada.find_board">
+<tt class="descname">find_board</tt><big>(</big><em>response</em><big>)</big><a class="headerlink" href="#bbpriceline_canada.BBPricelinePostSpiderCanada.find_board" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bbpriceline_canada.BBPricelinePostSpiderCanada.find_dates">
+<tt class="descname">find_dates</tt><big>(</big><em>date_str</em><big>)</big><a class="headerlink" href="#bbpriceline_canada.BBPricelinePostSpiderCanada.find_dates" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bbpriceline_canada.BBPricelinePostSpiderCanada.find_post_num">
+<tt class="descname">find_post_num</tt><big>(</big><em>url</em><big>)</big><a class="headerlink" href="#bbpriceline_canada.BBPricelinePostSpiderCanada.find_post_num" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="bbpriceline_canada.BBPricelinePostSpiderCanada.name">
+<tt class="descname">name</tt><em class="property"> = 'BBPricelinePostSpiderCanada'</em><a class="headerlink" href="#bbpriceline_canada.BBPricelinePostSpiderCanada.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bbpriceline_canada.BBPricelinePostSpiderCanada.parse">
+<tt class="descname">parse</tt><big>(</big><em>response</em><big>)</big><a class="headerlink" href="#bbpriceline_canada.BBPricelinePostSpiderCanada.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bbpriceline_canada.BBPricelinePostSpiderCanada.parse_board">
+<tt class="descname">parse_board</tt><big>(</big><em>response</em><big>)</big><a class="headerlink" href="#bbpriceline_canada.BBPricelinePostSpiderCanada.parse_board" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bbpriceline_canada.BBPricelinePostSpiderCanada.parse_priceline_list">
+<tt class="descname">parse_priceline_list</tt><big>(</big><em>response</em><big>)</big><a class="headerlink" href="#bbpriceline_canada.BBPricelinePostSpiderCanada.parse_priceline_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="bbpriceline_canada.BBPricelinePostSpiderCanada.start_urls">
+<tt class="descname">start_urls</tt><em class="property"> = ['http://www.betterbidding.com']</em><a class="headerlink" href="#bbpriceline_canada.BBPricelinePostSpiderCanada.start_urls" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="bbpriceline_canada.main">
+<tt class="descclassname">bbpriceline_canada.</tt><tt class="descname">main</tt><big>(</big><big>)</big><a class="headerlink" href="#bbpriceline_canada.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setups item signal and run the spider</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-bbpriceline_us">
+<span id="scrapers-bbpriceline-us-scraper-for-us-part-of-http-www-betterbidding-com"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">scrapers.bbpriceline_us</span></tt> &#8211; Scraper for US part of <a class="reference external" href="http://www.betterbidding.com">http://www.betterbidding.com</a><a class="headerlink" href="#module-bbpriceline_us" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="bbpriceline_us.BBPricelinePostSpiderUS">
+<em class="property">class </em><tt class="descclassname">bbpriceline_us.</tt><tt class="descname">BBPricelinePostSpiderUS</tt><big>(</big><em>name=None</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#bbpriceline_us.BBPricelinePostSpiderUS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">scrapy.spider.BaseSpider</span></tt></p>
+<p><a class="reference external" href="mailto:David&#37;&#52;&#48;fetchopia">David<span>&#64;</span>fetchopia</a> 
+Date:4/25/2012
+Description:
+Scrapes the betterbidding forum site for all US priceline hotel lists
+Additional manual processing for entries state field after running this script (Some US states are clustered together)</p>
+<dl class="method">
+<dt id="bbpriceline_us.BBPricelinePostSpiderUS.date_diff">
+<tt class="descname">date_diff</tt><big>(</big><em>date1</em>, <em>date2</em><big>)</big><a class="headerlink" href="#bbpriceline_us.BBPricelinePostSpiderUS.date_diff" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bbpriceline_us.BBPricelinePostSpiderUS.find_board">
+<tt class="descname">find_board</tt><big>(</big><em>response</em><big>)</big><a class="headerlink" href="#bbpriceline_us.BBPricelinePostSpiderUS.find_board" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bbpriceline_us.BBPricelinePostSpiderUS.find_dates">
+<tt class="descname">find_dates</tt><big>(</big><em>date_str</em><big>)</big><a class="headerlink" href="#bbpriceline_us.BBPricelinePostSpiderUS.find_dates" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bbpriceline_us.BBPricelinePostSpiderUS.find_post_num">
+<tt class="descname">find_post_num</tt><big>(</big><em>url</em><big>)</big><a class="headerlink" href="#bbpriceline_us.BBPricelinePostSpiderUS.find_post_num" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="bbpriceline_us.BBPricelinePostSpiderUS.name">
+<tt class="descname">name</tt><em class="property"> = 'BBPricelinePostSpiderUS'</em><a class="headerlink" href="#bbpriceline_us.BBPricelinePostSpiderUS.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bbpriceline_us.BBPricelinePostSpiderUS.parse">
+<tt class="descname">parse</tt><big>(</big><em>response</em><big>)</big><a class="headerlink" href="#bbpriceline_us.BBPricelinePostSpiderUS.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bbpriceline_us.BBPricelinePostSpiderUS.parse_board">
+<tt class="descname">parse_board</tt><big>(</big><em>response</em><big>)</big><a class="headerlink" href="#bbpriceline_us.BBPricelinePostSpiderUS.parse_board" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bbpriceline_us.BBPricelinePostSpiderUS.parse_priceline_list">
+<tt class="descname">parse_priceline_list</tt><big>(</big><em>response</em><big>)</big><a class="headerlink" href="#bbpriceline_us.BBPricelinePostSpiderUS.parse_priceline_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="bbpriceline_us.BBPricelinePostSpiderUS.start_urls">
+<tt class="descname">start_urls</tt><em class="property"> = ['http://www.betterbidding.com/']</em><a class="headerlink" href="#bbpriceline_us.BBPricelinePostSpiderUS.start_urls" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="bbpriceline_us.main">
+<tt class="descclassname">bbpriceline_us.</tt><tt class="descname">main</tt><big>(</big><big>)</big><a class="headerlink" href="#bbpriceline_us.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setups item signal and run the spider</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-common.libs">
+<span id="scrapers-common-libs-various-common-functions"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">scrapers.common.libs</span></tt> &#8211; Various common functions<a class="headerlink" href="#module-common.libs" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="common.libs.auto_queries">
+<tt class="descclassname">common.libs.</tt><tt class="descname">auto_queries</tt><big>(</big><big>)</big><a class="headerlink" href="#common.libs.auto_queries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Settings for the queries to output
+Creates a list of queries &#8220;length&#8221; days into the future for the hotels in the &#8220;hotels&#8221; array</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="common.libs.check_table">
+<tt class="descclassname">common.libs.</tt><tt class="descname">check_table</tt><big>(</big><big>)</big><a class="headerlink" href="#common.libs.check_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>1 Connects to the database
+2 Checks how accurate hotels are based on (words from smaller string in the larger string) / words in the smaller string
+3 Choose how accurent you want to check (0 &lt;= like &lt;= 1)
+4 Add whatever code you want to do with the results</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="common.libs.cmp">
+<tt class="descclassname">common.libs.</tt><tt class="descname">cmp</tt><big>(</big><em>str1</em>, <em>str2</em><big>)</big><a class="headerlink" href="#common.libs.cmp" title="Permalink to this definition">¶</a></dt>
+<dd><p>1 Splits the strings into individual words 
+2 Makes sure the smaller word is in str1
+3 Calculates probability of match by: (words from str1 found in str2) / number of words in str1
+4 Rounds off the value and returns it</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="common.libs.cmp_abbr">
+<tt class="descclassname">common.libs.</tt><tt class="descname">cmp_abbr</tt><big>(</big><em>str1</em>, <em>str2</em><big>)</big><a class="headerlink" href="#common.libs.cmp_abbr" title="Permalink to this definition">¶</a></dt>
+<dd><p>1 Finds the smaller string and puts it in str1 
+2 Counts how many characters from str1 match in str2 in the same order</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="common.libs.dates">
+<tt class="descclassname">common.libs.</tt><tt class="descname">dates</tt><big>(</big><em>length</em><big>)</big><a class="headerlink" href="#common.libs.dates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the next &#8220;length&#8221; days into the future and returns each in a mm/dd/yyyy format</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="common.libs.find_city">
+<tt class="descclassname">common.libs.</tt><tt class="descname">find_city</tt><big>(</big><em>city</em>, <em>state</em>, <em>country</em>, <em>c</em><big>)</big><a class="headerlink" href="#common.libs.find_city" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selects city from db or inserts city name if not exists</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="common.libs.find_name">
+<tt class="descclassname">common.libs.</tt><tt class="descname">find_name</tt><big>(</big><em>str</em><big>)</big><a class="headerlink" href="#common.libs.find_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>1  Cleans the string and splits it into word groups
+2  Finds the largest substring and returns it</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="common.libs.find_price">
+<tt class="descclassname">common.libs.</tt><tt class="descname">find_price</tt><big>(</big><em>str</em><big>)</big><a class="headerlink" href="#common.libs.find_price" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds the price in the string and returns it if found</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="common.libs.find_star">
+<tt class="descclassname">common.libs.</tt><tt class="descname">find_star</tt><big>(</big><em>str</em><big>)</big><a class="headerlink" href="#common.libs.find_star" title="Permalink to this definition">¶</a></dt>
+<dd><p>1  Normalizes the string for finding the star rating
+2  Finds the star rating in the new string and returns it if found
+3  Checks if its a resort and returns -1 if so</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="common.libs.find_states">
+<tt class="descclassname">common.libs.</tt><tt class="descname">find_states</tt><big>(</big><em>input</em><big>)</big><a class="headerlink" href="#common.libs.find_states" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selects state from db or inserts state name if not exists</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="common.libs.makegraph">
+<tt class="descclassname">common.libs.</tt><tt class="descname">makegraph</tt><big>(</big><big>)</big><a class="headerlink" href="#common.libs.makegraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializers for the function
+Loop through all days and find the prices</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="common.libs.printable">
+<tt class="descclassname">common.libs.</tt><tt class="descname">printable</tt><big>(</big><em>str</em><big>)</big><a class="headerlink" href="#common.libs.printable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes the string printable (removes unicode chars outside of range(0,127))</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="common.libs.rNA">
+<tt class="descclassname">common.libs.</tt><tt class="descname">rNA</tt><big>(</big><em>str</em><big>)</big><a class="headerlink" href="#common.libs.rNA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes the string printable (removes unicode chars outside of range(31,127))</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-common.processed_forum_data">
+<span id="scrapers-common-processed-forum-data-database-mapper-class-for-processed-raw-forum-data-table"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">scrapers.common.processed_forum_data</span></tt> &#8211; Database Mapper Class for processed_raw_forum_data table<a class="headerlink" href="#module-common.processed_forum_data" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="common.processed_forum_data.ProcessedRawForumData">
+<em class="property">class </em><tt class="descclassname">common.processed_forum_data.</tt><tt class="descname">ProcessedRawForumData</tt><big>(</big><em>hotel_name</em>, <em>city_area</em>, <em>region</em>, <em>star</em>, <em>url</em>, <em>state</em>, <em>target</em>, <em>source</em>, <em>country</em><big>)</big><a class="headerlink" href="#common.processed_forum_data.ProcessedRawForumData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">sqlalchemy.ext.declarative.Base</span></tt></p>
+<p>Database Mapper Class for processed_raw_forum_data table
+This table will store the raw scraped data from the forum</p>
+<dl class="attribute">
+<dt id="common.processed_forum_data.ProcessedRawForumData.city_area">
+<tt class="descname">city_area</tt><a class="headerlink" href="#common.processed_forum_data.ProcessedRawForumData.city_area" title="Permalink to this definition">¶</a></dt>
+<dd><p>city/area information for the particular hotel from the forum</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="common.processed_forum_data.ProcessedRawForumData.country">
+<tt class="descname">country</tt><a class="headerlink" href="#common.processed_forum_data.ProcessedRawForumData.country" title="Permalink to this definition">¶</a></dt>
+<dd><p>the country name</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="common.processed_forum_data.ProcessedRawForumData.hotel_name">
+<tt class="descname">hotel_name</tt><a class="headerlink" href="#common.processed_forum_data.ProcessedRawForumData.hotel_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the hotel from the forum</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="common.processed_forum_data.ProcessedRawForumData.region">
+<tt class="descname">region</tt><a class="headerlink" href="#common.processed_forum_data.ProcessedRawForumData.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>region name from the forum</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="common.processed_forum_data.ProcessedRawForumData.source_forum">
+<tt class="descname">source_forum</tt><a class="headerlink" href="#common.processed_forum_data.ProcessedRawForumData.source_forum" title="Permalink to this definition">¶</a></dt>
+<dd><p>the name of the forum the data has been scraped from (bb, bft)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="common.processed_forum_data.ProcessedRawForumData.star">
+<tt class="descname">star</tt><a class="headerlink" href="#common.processed_forum_data.ProcessedRawForumData.star" title="Permalink to this definition">¶</a></dt>
+<dd><p>star rating of the hotel according to that forum</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="common.processed_forum_data.ProcessedRawForumData.state">
+<tt class="descname">state</tt><a class="headerlink" href="#common.processed_forum_data.ProcessedRawForumData.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the state the hotel is from</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="common.processed_forum_data.ProcessedRawForumData.target_site">
+<tt class="descname">target_site</tt><a class="headerlink" href="#common.processed_forum_data.ProcessedRawForumData.target_site" title="Permalink to this definition">¶</a></dt>
+<dd><p>the target site is the site the forum is referring to (priceline, hotwire etc)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="common.processed_forum_data.ProcessedRawForumData.uid">
+<tt class="descname">uid</tt><a class="headerlink" href="#common.processed_forum_data.ProcessedRawForumData.uid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Primary key</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="common.processed_forum_data.ProcessedRawForumData.url">
+<tt class="descname">url</tt><a class="headerlink" href="#common.processed_forum_data.ProcessedRawForumData.url" title="Permalink to this definition">¶</a></dt>
+<dd><p>address to the page it was scraped from</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-common.processed_forum_data_hotwire">
+<span id="scrapers-common-processed-forum-data-database-mapper-class-for-processed-raw-forum-data-hotwire-table"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">scrapers.common.processed_forum_data</span></tt> &#8211; Database Mapper Class for processed_raw_forum_data_hotwire table<a class="headerlink" href="#module-common.processed_forum_data_hotwire" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="common.processed_forum_data_hotwire.ProcessedRawForumData_hotwire">
+<em class="property">class </em><tt class="descclassname">common.processed_forum_data_hotwire.</tt><tt class="descname">ProcessedRawForumData_hotwire</tt><big>(</big><em>hotel_name</em>, <em>city_area</em>, <em>region</em>, <em>star</em>, <em>state</em>, <em>country</em>, <em>amenities</em>, <em>target</em>, <em>source</em><big>)</big><a class="headerlink" href="#common.processed_forum_data_hotwire.ProcessedRawForumData_hotwire" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">sqlalchemy.ext.declarative.Base</span></tt></p>
+<p>Database Mapper Class for processed_raw_forum_data_hotwire table
+This table will store the raw scraped data from the forum</p>
+<dl class="attribute">
+<dt id="common.processed_forum_data_hotwire.ProcessedRawForumData_hotwire.amenities">
+<tt class="descname">amenities</tt><a class="headerlink" href="#common.processed_forum_data_hotwire.ProcessedRawForumData_hotwire.amenities" title="Permalink to this definition">¶</a></dt>
+<dd><p>amenities</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="common.processed_forum_data_hotwire.ProcessedRawForumData_hotwire.city_area">
+<tt class="descname">city_area</tt><a class="headerlink" href="#common.processed_forum_data_hotwire.ProcessedRawForumData_hotwire.city_area" title="Permalink to this definition">¶</a></dt>
+<dd><p>city/area information for the particular hotel from the forum</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="common.processed_forum_data_hotwire.ProcessedRawForumData_hotwire.country">
+<tt class="descname">country</tt><a class="headerlink" href="#common.processed_forum_data_hotwire.ProcessedRawForumData_hotwire.country" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of he country</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="common.processed_forum_data_hotwire.ProcessedRawForumData_hotwire.hotel_name">
+<tt class="descname">hotel_name</tt><a class="headerlink" href="#common.processed_forum_data_hotwire.ProcessedRawForumData_hotwire.hotel_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the hotel from the forum</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="common.processed_forum_data_hotwire.ProcessedRawForumData_hotwire.region">
+<tt class="descname">region</tt><a class="headerlink" href="#common.processed_forum_data_hotwire.ProcessedRawForumData_hotwire.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>region name from the forum</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="common.processed_forum_data_hotwire.ProcessedRawForumData_hotwire.source_forum">
+<tt class="descname">source_forum</tt><a class="headerlink" href="#common.processed_forum_data_hotwire.ProcessedRawForumData_hotwire.source_forum" title="Permalink to this definition">¶</a></dt>
+<dd><p>the name of the forum the data has been scraped from (bb, bft)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="common.processed_forum_data_hotwire.ProcessedRawForumData_hotwire.star">
+<tt class="descname">star</tt><a class="headerlink" href="#common.processed_forum_data_hotwire.ProcessedRawForumData_hotwire.star" title="Permalink to this definition">¶</a></dt>
+<dd><p>star rating of the hotel according to that forum</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="common.processed_forum_data_hotwire.ProcessedRawForumData_hotwire.state">
+<tt class="descname">state</tt><a class="headerlink" href="#common.processed_forum_data_hotwire.ProcessedRawForumData_hotwire.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the state the hotel is from</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="common.processed_forum_data_hotwire.ProcessedRawForumData_hotwire.target_site">
+<tt class="descname">target_site</tt><a class="headerlink" href="#common.processed_forum_data_hotwire.ProcessedRawForumData_hotwire.target_site" title="Permalink to this definition">¶</a></dt>
+<dd><p>the target site is the site the forum is referring to (priceline, hotwire etc)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="common.processed_forum_data_hotwire.ProcessedRawForumData_hotwire.uid">
+<tt class="descname">uid</tt><a class="headerlink" href="#common.processed_forum_data_hotwire.ProcessedRawForumData_hotwire.uid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Primary key</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-common.alchemy_session">
+<span id="scrapers-common-alchemy-session-creates-a-single-session-that-is-shared-among-all-the-python-files"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">scrapers.common.alchemy_session</span></tt> &#8211; Creates a single session that is shared among all the python files<a class="headerlink" href="#module-common.alchemy_session" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="common.alchemy_session.get_alchemy_info">
+<tt class="descclassname">common.alchemy_session.</tt><tt class="descname">get_alchemy_info</tt><big>(</big><em>echo=False</em><big>)</big><a class="headerlink" href="#common.alchemy_session.get_alchemy_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a single session
+that is shared among all the python files that load this module
+and run get_engine_session</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Source documentation</a><ul>
+<li><a class="reference internal" href="#module-bbhw_canada"><tt class="docutils literal"><span class="pre">scrapers.bbhw_canada</span></tt> &#8211; Scraper for Canada part of http://www.betterbidding.com</a></li>
+<li><a class="reference internal" href="#module-bbhw_us"><tt class="docutils literal"><span class="pre">scrapers.bbhw_us</span></tt> &#8211; Scraper for US part of http://www.betterbidding.com</a></li>
+<li><a class="reference internal" href="#module-bbpriceline_canada"><tt class="docutils literal"><span class="pre">scrapers.bbpriceline_canada</span></tt> &#8211; Scraper for Canada part of http://www.betterbidding.com</a></li>
+<li><a class="reference internal" href="#module-bbpriceline_us"><tt class="docutils literal"><span class="pre">scrapers.bbpriceline_us</span></tt> &#8211; Scraper for US part of http://www.betterbidding.com</a></li>
+<li><a class="reference internal" href="#module-common.libs"><tt class="docutils literal"><span class="pre">scrapers.common.libs</span></tt> &#8211; Various common functions</a></li>
+<li><a class="reference internal" href="#module-common.processed_forum_data"><tt class="docutils literal"><span class="pre">scrapers.common.processed_forum_data</span></tt> &#8211; Database Mapper Class for processed_raw_forum_data table</a></li>
+<li><a class="reference internal" href="#module-common.processed_forum_data_hotwire"><tt class="docutils literal"><span class="pre">scrapers.common.processed_forum_data</span></tt> &#8211; Database Mapper Class for processed_raw_forum_data_hotwire table</a></li>
+<li><a class="reference internal" href="#module-common.alchemy_session"><tt class="docutils literal"><span class="pre">scrapers.common.alchemy_session</span></tt> &#8211; Creates a single session that is shared among all the python files</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="changelog.html"
+                        title="previous chapter">Changelog</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/api.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="changelog.html" title="Changelog"
+             >previous</a> |</li>
+        <li><a href="index.html">fetchopia 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Brilenkov A..
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+    </div>
+  </body>
+</html>

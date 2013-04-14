@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Developer guide &mdash; fetchopia 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="top" title="fetchopia 0.0.1 documentation" href="index.html" />
+    <link rel="next" title="Changelog" href="changelog.html" />
+    <link rel="prev" title="User guide" href="userguide.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="changelog.html" title="Changelog"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="userguide.html" title="User guide"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">fetchopia 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="developer-guide">
+<h1>Developer guide<a class="headerlink" href="#developer-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="database-structure">
+<h2>Database structure<a class="headerlink" href="#database-structure" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/database_schema_priceline.jpg" src="_images/database_schema_priceline.jpg" />
+</div>
+<div class="section" id="setup-developer-environment">
+<h2>Setup developer environment<a class="headerlink" href="#setup-developer-environment" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>sudo aptitude install git gcc python-dev bacula-console</li>
+<li>git clone <a class="reference external" href="https://github.com/xxx/xx.git">https://github.com/xxx/xx.git</a> xxx</li>
+<li>cd xxx</li>
+<li>cp buildout.d/templates/buildout.cfg.in buildout.cfg</li>
+<li>vim buildout.cfg  # configure variables</li>
+<li>python bootstrap.py</li>
+<li>bin/buildout</li>
+<li>bin/pserve &#8211;reload development.ini</li>
+</ul>
+</div>
+<div class="section" id="running-python-tests">
+<h2>Running Python tests<a class="headerlink" href="#running-python-tests" title="Permalink to this headline">¶</a></h2>
+<p>Easy as:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>bin/nosetests
+</pre></div>
+</div>
+<p>By default it will run against sqlite fixture, you can also tell nosetests to use mysql fixture (you need to import sql manually for now):</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ DATABASE</span><span class="o">=</span><span class="s2">&quot;mysql&quot;</span> bin/nosetests
+</pre></div>
+</div>
+<p>Or just specify sqlalchemy engine:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ ENGINE</span><span class="o">=</span><span class="s2">&quot;sqlite:////var/lib/bacula/bacula.db&quot;</span> bin/nosetests
+</pre></div>
+</div>
+</div>
+<div class="section" id="running-javascript-tests">
+<h2>Running Javascript tests<a class="headerlink" href="#running-javascript-tests" title="Permalink to this headline">¶</a></h2>
+<p>Install and configure phantomjs (webkit headless testing):</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get install libqtwebkit-dev
+<span class="nv">$ </span>git clone git://github.com/ariya/phantomjs.git <span class="o">&amp;&amp;</span> <span class="nb">cd </span>phantomjs
+<span class="nv">$ </span>qmake-qt4 <span class="o">&amp;&amp;</span> make
+<span class="nv">$ </span>sudo cp bin/phantomjs /usr/local/bin/
+</pre></div>
+</div>
+<p>Run tests:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd</span> ../xxx
+<span class="nv">$ </span>./.travis_qunit_tests.sh
+</pre></div>
+</div>
+</div>
+<div class="section" id="coding-conventions">
+<h2>Coding conventions<a class="headerlink" href="#coding-conventions" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://www.python.org/dev/peps/pep-0008/">PEP8</a> except for 80 char length rule</li>
+<li>add changelog, test and documentation with code in commits</li>
+<li>same applies to javascript</li>
+<li>jslinted javascript</li>
+</ul>
+</div>
+<div class="section" id="releasing-xxx">
+<h2>Releasing <tt class="xref py py-mod docutils literal"><span class="pre">xxx</span></tt><a class="headerlink" href="#releasing-xxx" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>bin/fullrelease
+<span class="nv">$ </span>git checkout latests
+<span class="nv">$ </span>git merge master
+<span class="nv">$ </span>git push
+<span class="c"># update http://readthedocs.org/xxx/xxx/versions/</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Developer guide</a><ul>
+<li><a class="reference internal" href="#database-structure">Database structure</a></li>
+<li><a class="reference internal" href="#setup-developer-environment">Setup developer environment</a></li>
+<li><a class="reference internal" href="#running-python-tests">Running Python tests</a></li>
+<li><a class="reference internal" href="#running-javascript-tests">Running Javascript tests</a></li>
+<li><a class="reference internal" href="#coding-conventions">Coding conventions</a></li>
+<li><a class="reference internal" href="#releasing-xxx">Releasing <tt class="docutils literal"><span class="pre">xxx</span></tt></a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="userguide.html"
+                        title="previous chapter">User guide</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="changelog.html"
+                        title="next chapter">Changelog</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/developer.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="changelog.html" title="Changelog"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="userguide.html" title="User guide"
+             >previous</a> |</li>
+        <li><a href="index.html">fetchopia 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Brilenkov A..
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+    </div>
+  </body>
+</html>
